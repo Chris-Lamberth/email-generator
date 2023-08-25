@@ -1,0 +1,163 @@
+<html>
+
+
+<body style="margin: 0; background-color: #dadada;">
+	<table width="580" height="20" cellpadding="0" cellspacing="0" border="0" align="center">
+		<tr width="580">
+			<td></td>
+		</tr>
+	</table>
+	<table width="580" cellpadding="0" cellspacing="0" border="0" align="center" style="background-color: #ffffff;">
+		<tr width="580" height="20" style="background-color: #ffffff;">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr width="580" style="background-color: #ffffff;">
+			<td width="40"></td>
+			<td width="150px" height="40"><img src="<%= logoURL %>" width="150px" height="40" alt="Logo"></td>
+			<td width="350px" align="right">
+				<font style="font-size: 14px; line-height: 14px; font-family: Helvetica, sans-serif; color:<%= colors.primary %>;">
+					<a href="<%= headerLinks.services %>" style="color:gray; text-decoration:none;">Services</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+					<a href="<%= headerLinks.deals %>" style="color:gray; text-decoration:none;">Deals</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+					<a href="<%= headerLinks.appointment %>" style="color:gray; text-decoration:none;">Book Appointment</a>
+				</font>
+			</td>
+			<td width="40"></td>
+		</tr>
+		<tr width="580" height="20" style="background-color: #ffffff;">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+	<table width="580" height="5" cellpadding="0" cellspacing="0" border="0" align="center" bgcolor="<%= colors.primary %>">
+		<tr width="580">
+			<td></td>
+		</tr>
+	</table>
+	<table width="580" cellpadding="0" cellspacing="0" border="0" align="center">
+
+		<tr width="580" height="235">
+			<td><img src="<%= headerImage %>" width="580" height="235" alt="" border="0" /></td>
+		</tr>
+
+		<tr width="580" height="40" style="background-color: #ffffff;">
+			<td width="580" height="40" style="background-color: #ffffff;"></td>
+		</tr>
+		<tr width="580" style="background-color: #ffffff;">
+			<td width="580">
+				<table width="580" cellpadding="0" cellspacing="0" border="0">
+					<tr width="580" style="background-color: #ffffff;">
+						<td width="40" style="background-color: #ffffff;"></td>
+						<td width="500" style="background-color: #ffffff;">
+							<!-- BRAKEmax -->
+							<font style="font-size: 18px; line-height: 20px; font-family: Helvetica, sans-serif; font-weight: bold; color: <%= colors.primary %>;">
+								<%= title %>
+							</font><br><br>
+
+							<font style="font-size: 14px; line-height: 18px; font-family: Helvetica, sans-serif;">
+								<%= bodyCopy %>
+							</font><br><br>
+
+							<a href="<%= headerLinks.appointment %>" style="background-color: <%= colors.primary %>; font-size: 14px; line-height: 18px; font-family: Helvetica, sans-serif; color: #ffffff; font-weight: bold; text-decoration: none; padding-top: 12px; padding-bottom: 12px; padding-left: 20px; padding-right: 20px; display: inline-block;">Book Appointment</a><br><br><br>
+
+							<!-- BRAKEmax -->
+							<img src="images/coupon_53.jpg" width="500" height="258" alt="Coupon" border="0" /><br><br>
+							<img src="images/coupon_55.jpg" width="500" height="258" alt="Coupon" border="0" /><br><br>
+							<img src="images/coupon_22.jpg" width="500" height="258" alt="Coupon" border="0" /><br><br>
+							<img src="images/coupon_7.jpg" width="500" height="258" alt="Coupon" border="0" /><br><br>
+							<img src="images/coupon_6.jpg" width="500" height="258" alt="Coupon" border="0" /><br><br>
+							<img src="images/coupon_31.jpg" width="500" height="258" alt="Coupon" border="0" /><br><br>
+							<img src="images/coupon_4.jpg" width="500" height="258" alt="Coupon" border="0" /><br><br>
+
+
+							<a href="<%= headerLinks.appointment %>" style="background-color: <%= colors.primary %>; font-size: 14px; line-height: 18px; font-family: Helvetica, sans-serif; color: #ffffff; font-weight: bold; text-decoration: none; padding-top: 12px; padding-bottom: 12px; padding-left: 20px; padding-right: 20px; display: inline-block;">Book Appointment</a>
+
+						</td>
+						<td width="40" style="background-color: #ffffff;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr width="580" height="40" style="background-color: #ffffff;">
+			<td width="580" height="40" style="background-color: #ffffff;"></td>
+		</tr>
+		<tr>
+			<td>
+				<table width="580" height="5" cellpadding="0" cellspacing="0" border="0" align="center" bgcolor="<%= colors.primary %>">
+					<tr width="580">
+						<td></td>
+					</tr>
+				</table>
+
+			</td>
+		</tr>
+		<tr width="580" height="40" style="background-color: #ebebeb;">
+			<td width="580" height="40" style="background-color: #ebebeb;"></td>
+		</tr>
+		<tr width="580" style="background-color: #ebebeb;">
+			<td>
+				<table width="580" cellpadding="0" cellspacing="0" border="0">
+					<tr width="580" style="background-color: #ebebeb;">
+						<td width="40" style="background-color: #ebebeb;" valign="top"></td>
+
+						<% for (let section in footerLinks) { %>
+							<td width="166" style="background-color: #ebebeb;" valign="top">
+								<font style="font-size: 12px; line-height: 16px; font-family: Helvetica, sans-serif;">
+									<font style="font-weight: bold;">
+										<%= section.toUpperCase() %>
+									</font><br><br>
+
+									<% for (let linkName in footerLinks[section]) { %>
+										<a href="<%= footerLinks[section][linkName] %>" style="color: #000000; text-decoration: none;">
+											<%= linkName %>
+										</a><br>
+										<% } %>
+
+											<% if (section.toLowerCase()==="contact us" && phone) { %>
+												<br>Call Us <%= phone %>
+													<% } %>
+								</font>
+							</td>
+							<% } %>
+
+								<td width="42" style="background-color: #ebebeb;" valign="top"></td>
+					</tr>
+				</table>
+
+			</td>
+		</tr>
+		<tr width="580" height="40" style="background-color: #ebebeb;">
+			<td width="580" height="40" style="background-color: #ebebeb;"></td>
+		</tr>
+		<tr width="580" height="20">
+			<td width="580" height="20"></td>
+		</tr>
+		<tr width="580">
+			<td>
+				<table width="580" cellpadding="0" cellspacing="0" border="0">
+					<tr width="580">
+						<td width="40"></td>
+						<td width="500" align="center">
+							<font style="font-size: 10px; line-height: 16px; font-family: Helvetica, sans-serif; text-align: center; color:#696969;">
+								<%= name %>. All Rights Reserved<br>
+									3945 E. Fort Lowell Road Ste 211 Tucson, AZ 85712<br>
+									<unsubscribe style="color:#696969;">Unsubscribe</unsubscribe>
+							</font><br><br>
+						</td>
+						<td width="40"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr width="580" height="40">
+			<td width="580" height="40"></td>
+		</tr>
+
+	</table>
+</body>
+
+</html>

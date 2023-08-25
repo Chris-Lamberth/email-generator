@@ -1,0 +1,101 @@
+{
+	"service": {
+		"brakemax": {
+			"name": "BRAKEmax",
+			"logoURL": "images/logo_brakemax.jpg",
+			"phone": "(888) 334-7449",
+			"colors": {
+				"primary": "#375ea8"
+			},
+			"headerLinks": {
+				"services": "https://brakemax.com/auto-services/",
+				"deals": "https://brakemax.com/discounts/",
+				"appointment": "https://brakemax.com/contact-us/appointments/"
+			},
+			"footerLinks": {
+				"services": {
+					"Tires": "https://brakemax.com/auto-services/tires/",
+					"Oil Changes": "https://brakemax.com/auto-services/oil-change/",
+					"Engine Services": "https://brakemax.com/auto-services/engine/",
+					"Air Conditioning Services": "https://brakemax.com/auto-services/ac-repair/",
+					"Preventative Services": "https://brakemax.com/auto-services/maintenance/",
+					"Other Services": "https://brakemax.com/auto-services/other/"
+				},
+				"resources": {
+					"Coupons": "https://brakemax.com/discounts/",
+					"Concierge Service": "https://brakemax.com/concierge-service/",
+					"Reading Your Tires": "https://brakemax.com/resources/reading-tires/",
+					"Blog": "https://brakemax.com/blog/"
+				},
+				"contact us":{
+					"Request a Quote": "https://brakemax.com/contact-us/appointments/",
+					"Schedule an Appointment": "https://brakemax.com/contact-us/appointments/"
+				}
+			}
+		},
+		"driversedge": {
+			"name": "Driver's Edge",
+			"logoURL": "images/logo_driversedge.jpg",
+			"phone": "(844) 564-8111",
+			"colors": {
+				"primary": "#d6392d"
+			},
+			"headerLinks": {
+				"services": "https://www.mydriversedge.com/services/",
+				"deals": "https://www.mydriversedge.com/coupons/",
+				"appointment": "https://www.mydriversedge.com/contact-us/appointments/"
+			},
+			"footerLinks": {
+				"services": {
+					"Oil Change": "https://www.mydriversedge.com/services/oil-change/",
+					"A/C Service & Repair": "https://www.mydriversedge.com/services/air-conditioning/",
+					"Brake Repair": "https://www.mydriversedge.com/services/brake-repair/",
+					"Preventative Maintenance": "https://www.mydriversedge.com/services/preventative-maintenance/",
+					"Tire Services": "https://www.mydriversedge.com/services/tire-rotation-balance/"
+				},
+				"resources": {
+					"Coupons": "https://www.mydriversedge.com/coupons/",
+					"Our Automotive Blog": "https://www.mydriversedge.com/blog/",
+					"State Vehicle Inspections": "https://www.mydriversedge.com/services/texas-state-inspections/"
+				},
+				"contact us":{
+					"Concierge Service": "https://www.mydriversedge.com/concierge-service/",
+					"Schedule an Appointment": "https://www.mydriversedge.com/contact-us/appointments/"
+				}
+			}
+		}
+	},
+	"tire": {
+		"testTire": {
+			"name": "Test Tire",
+			"logoURL": "images/logo_driversedge.jpg",
+			"phone": "(844) 564-8111",
+			"colors": {
+				"primary": "#d6392d"
+			},
+			"headerLinks": {
+				"services": "https://www.mydriversedge.com/services/",
+				"deals": "https://www.mydriversedge.com/coupons/",
+				"appointment": "https://www.mydriversedge.com/contact-us/appointments/"
+			},
+			"footerLinks": {
+				"services": {
+					"Oil Change": "https://www.mydriversedge.com/services/oil-change/",
+					"A/C Service & Repair": "https://www.mydriversedge.com/services/air-conditioning/",
+					"Brake Repair": "https://www.mydriversedge.com/services/brake-repair/",
+					"Preventative Maintenance": "https://www.mydriversedge.com/services/preventative-maintenance/",
+					"Tire Services": "https://www.mydriversedge.com/services/tire-rotation-balance/"
+				},
+				"resources": {
+					"Coupons": "https://www.mydriversedge.com/coupons/",
+					"Our Automotive Blog": "https://www.mydriversedge.com/blog/",
+					"State Vehicle Inspections": "https://www.mydriversedge.com/services/texas-state-inspections/"
+				},
+				"contact us":{
+					"Concierge Service": "https://www.mydriversedge.com/concierge-service/",
+					"Schedule an Appointment": "https://www.mydriversedge.com/contact-us/appointments/"
+				}
+			}
+		}
+	}
+}
