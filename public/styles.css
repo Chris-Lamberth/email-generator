@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
+
 :root {
 	--site-padding: 40px;
-	--primary-color: rgb(240, 100, 73);
+	--primary-color: rgb(0, 0, 0);
 }
 
 * {
@@ -58,7 +60,7 @@ span,
 form input,
 form select,
 form textarea {
-	font-family: Open Sans, sans-serif;
+	font-family: "Rubik", sans-serif;
 	color: var(--onyx);
 }
 
@@ -69,6 +71,8 @@ form textarea {
 	border-radius: 5px;
 	font-size: 1rem;
 	transition: all 0.3s ease;
+	display: block;
+	margin: 0 0 0 auto;
 }
 .card {
 	background: #f3f3f3;
@@ -96,16 +100,36 @@ h1 strong {
 }
 h2 {
 	font-size: 1rem;
-	margin: 0 0 1.4em 0;
+	margin: 0 0 1em 0;
+}
+.info {
+	font-size: 0.6rem;
+	color: rgba(0, 0, 0, 0.5);
+	margin: 0 0 1em 0;
 }
 label {
 	font-size: 0.8rem;
 	margin: 0 0 1em 0;
 	display: inline-block;
 }
-.brand {
+.section {
 	margin: 0 0 3rem 0;
+	border: 1px solid rgb(215, 215, 215);
+	padding: 1.2rem;
+
+	border-radius: 0.5rem;
 }
+.group {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+.section .field p {
+	font-size: 0.6rem;
+	color: rgba(0, 0, 0, 0.5);
+	margin: 0 0 1em 0;
+}
+
 input,
 textarea,
 input {
@@ -116,7 +140,20 @@ input {
 	width: 100%;
 	color: #fff;
 	border: 1px solid rgb(215, 215, 215);
+	font-weight: 500;
 }
-.field {
+.field:not(:last-child) {
 	margin: 0 0 1.2rem 0;
+}
+.coupons .field {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+.coupons .field label {
+	flex: 2;
+	margin: 0;
+}
+.coupons .field input {
+	flex: 7;
 }

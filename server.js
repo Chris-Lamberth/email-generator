@@ -10,14 +10,10 @@ const archiver = require('archiver');
 const app = express();
 const port = 3000;
 
-
 // Function to replace placeholders
 function replacePlaceholders(input, brandName) {
     return input.replace(/\[Brand\]/g, brandName);
 }
-
-//Use public folder for static files
-app.use(express.static('public'));
 
 // Setting up EJS
 app.set('view engine', 'ejs');
@@ -26,20 +22,35 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+// Use public folder for static files
+app.use(express.static('public'));
+
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, os.tmpdir());  // save to system temp directory
   },
   filename: (req, file, cb) => {
     cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
-  },
+  }
 });
 
-const upload = multer({ storage: storage });
+const fileFilter = (req, file, cb) => {
+  if (file.mimetype === 'image/jpeg') {
+    cb(null, true);
+  } else {
+    cb(new Error('Only .jpg files are allowed!'), false);
+  }
+};
+
+const upload = multer({ storage: storage, fileFilter: fileFilter });
 
 app.get('/', (req, res) => {
-  res.render('form_page');  // Renders the form
-});
+	const jsonData = JSON.parse(fs.readFileSync('data.json', 'utf8'));
+	const serviceBrands = Object.values(jsonData.service).map(brand => brand.name);
+	const tireBrands = Object.values(jsonData.tire).map(brand => brand.name);
+	res.render('form_page', { serviceBrands, tireBrands });
+ });
+ 
 
 app.post('/generate-emails', upload.fields([{ name: 'serviceHeaderImage', maxCount: 1 }, { name: 'tireHeaderImage', maxCount: 1 }]), async (req, res) => {
   const jsonData = JSON.parse(fs.readFileSync('data.json', 'utf8'));
@@ -91,5 +102,5 @@ app.post('/generate-emails', upload.fields([{ name: 'serviceHeaderImage', maxCou
 });
 
 app.listen(port, () => {
-  console.log(`Server started on http://localhost:${port}`);
+  console.log(`Email Generator is now running on http://localhost:${port}`);
 });

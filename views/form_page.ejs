@@ -14,9 +14,13 @@
 		<h1>Sun Auto <strong>⚡ Email Generator</strong></h1>
 
 		<div class="card">
-			<h2>Service Brands</h2>
+
+			<div class="group">
+				<h2>Service Brands</h2>
+				<p class="info">Placeholder variable: [Brand]</p>
+			</div>
 			<form action="/generate-emails" method="post" enctype="multipart/form-data">
-				<div class="brand">
+				<div class="section">
 					<div class="field">
 						<label for="serviceTitle">Title</label>
 						<input type="text" id="serviceTitle" name="serviceTitle" required>
@@ -28,13 +32,19 @@
 					</div>
 
 					<div class="field">
-						<label for="serviceHeaderImage">Header Image</label>
-						<input type="file" id="serviceHeaderImage" name="serviceHeaderImage">
+						<div class="group">
+							<label for="tireHeaderImage">Header Image</label>
+							<p>.jpg only</p>
+						</div>
+						<input type="file" id="tireHeaderImage" name="tireHeaderImage" accept=".jpg">
 					</div>
 				</div>
-
-				<div class="brand">
+				<div class="group">
 					<h2>Tire Brands</h2>
+					<p class="info">Placeholder variable: [Brand]</p>
+				</div>
+				<div class="section">
+
 					<div class="field">
 						<label for="tireTitle">Title</label>
 						<input type="text" id="tireTitle" name="tireTitle" required>
@@ -46,14 +56,47 @@
 					</div>
 
 					<div class="field">
-						<label for="tireHeaderImage">Header Image</label>
-						<input type="file" id="tireHeaderImage" name="tireHeaderImage">
+						<div class="group">
+							<label for="tireHeaderImage">Header Image</label>
+							<p>.jpg only</p>
+						</div>
+						<input type="file" id="tireHeaderImage" name="tireHeaderImage" accept=".jpg">
+					</div>
+				</div>
+				<h2>Coupons</h2>
+				<div class="section">
+					<div class="field">
+						<div class="group">
+							<label for="directory">Coupon files</label>
+							<p>.jpg only</p>
+						</div>
+						<input type="file" name="directory" webkitdirectory multiple>
+					</div>
+
+					<div class="coupons">
+						<% serviceBrands.forEach(brand=> { %>
+							<div class="field">
+								<label for="<%= brand %>">
+									<%= brand %>:
+								</label>
+								<input type="text" id="<%= brand %>" name="<%= brand %>" accept=".jpg">
+							</div>
+							<% }); %>
+								<% tireBrands.forEach(brand=> { %>
+									<div class="field">
+										<label for="<%= brand %>">
+											<%= brand %>:
+										</label>
+										<input type="text" id="<%= brand %>" name="<%= brand %>" accept=".jpg">
+									</div>
+									<% }); %>
 					</div>
 				</div>
 				<button class="btn" type="submit">Generate Emails</button>
 			</form>
 		</div>
 	</div>
+	<script src="scripts.js"></script>
 </body>
 
 </html>
