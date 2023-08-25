@@ -10,10 +10,14 @@ const archiver = require('archiver');
 const app = express();
 const port = 3000;
 
+
 // Function to replace placeholders
 function replacePlaceholders(input, brandName) {
     return input.replace(/\[Brand\]/g, brandName);
 }
+
+//Use public folder for static files
+app.use(express.static('public'));
 
 // Setting up EJS
 app.set('view engine', 'ejs');

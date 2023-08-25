@@ -6,50 +6,53 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sun Auto Email Generator</title>
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
-	<div style="width: 70%; margin: 50px auto; padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-		<h2>Service Emails</h2>
-		<form action="/generate-emails" method="post" enctype="multipart/form-data">
+	<div class="container">
+		<h1>Sun Auto <strong>⚡ Email Generator</strong></h1>
 
-			<!-- Fields for Service category -->
-			<div style="margin-bottom: 20px;">
-				<label for="serviceTitle">Title:</label>
-				<input type="text" id="serviceTitle" name="serviceTitle" required style="width: 100%; padding: 10px;">
-			</div>
+		<div class="card">
+			<h2>Service Brands</h2>
+			<form action="/generate-emails" method="post" enctype="multipart/form-data">
+				<div class="brand">
+					<div class="field">
+						<label for="serviceTitle">Title</label>
+						<input type="text" id="serviceTitle" name="serviceTitle" required>
+					</div>
 
-			<div style="margin-bottom: 20px;">
-				<label for="serviceBodyCopy">Body Copy:</label>
-				<textarea id="serviceBodyCopy" name="serviceBodyCopy" rows="4" style="width: 100%; padding: 10px;"></textarea>
-			</div>
+					<div class="field">
+						<label for="serviceBodyCopy">Body Copy</label>
+						<textarea id="serviceBodyCopy" name="serviceBodyCopy" rows="6"></textarea>
+					</div>
 
-			<div style="margin-bottom: 20px;">
-				<label for="serviceHeaderImage">Header Image:</label>
-				<input type="file" id="serviceHeaderImage" name="serviceHeaderImage">
-			</div>
+					<div class="field">
+						<label for="serviceHeaderImage">Header Image</label>
+						<input type="file" id="serviceHeaderImage" name="serviceHeaderImage">
+					</div>
+				</div>
 
-			<h2>Tire Emails</h2>
+				<div class="brand">
+					<h2>Tire Brands</h2>
+					<div class="field">
+						<label for="tireTitle">Title</label>
+						<input type="text" id="tireTitle" name="tireTitle" required>
+					</div>
 
-			<!-- Fields for Tire category -->
-			<div style="margin-bottom: 20px;">
-				<label for="tireTitle">Title:</label>
-				<input type="text" id="tireTitle" name="tireTitle" required style="width: 100%; padding: 10px;">
-			</div>
+					<div class="field">
+						<label for="tireBodyCopy">Body Copy</label>
+						<textarea id="tireBodyCopy" name="tireBodyCopy" rows="6"></textarea>
+					</div>
 
-			<div style="margin-bottom: 20px;">
-				<label for="tireBodyCopy">Body Copy:</label>
-				<textarea id="tireBodyCopy" name="tireBodyCopy" rows="4" style="width: 100%; padding: 10px;"></textarea>
-			</div>
-
-			<div style="margin-bottom: 20px;">
-				<label for="tireHeaderImage">Header Image:</label>
-				<input type="file" id="tireHeaderImage" name="tireHeaderImage">
-			</div>
-
-			<button type="submit" style="margin-top: 20px; padding: 10px 20px; background-color: #007BFF; color: white; border: none; cursor: pointer;">Generate Emails</button>
-		</form>
+					<div class="field">
+						<label for="tireHeaderImage">Header Image</label>
+						<input type="file" id="tireHeaderImage" name="tireHeaderImage">
+					</div>
+				</div>
+				<button class="btn" type="submit">Generate Emails</button>
+			</form>
+		</div>
 	</div>
 </body>
 

@@ -1,0 +1,122 @@
+:root {
+	--site-padding: 40px;
+	--primary-color: rgb(240, 100, 73);
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background: #fff;
+	padding: 2rem 0;
+	background: rgb(215, 215, 215);
+}
+img {
+	width: 100%;
+}
+button {
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+.container {
+	width: 100%;
+	max-width: calc(600px + var(--site-padding) + var(--site-padding));
+	margin: 0 auto;
+	padding: 0 var(--site-padding);
+}
+::-moz-selection {
+	color: #fff;
+	background: var(--primary-color);
+}
+::selection {
+	color: #fff;
+	background: var(--primary-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+q,
+blockquote p,
+figcaption,
+label,
+time,
+p,
+a,
+li,
+span,
+form input,
+form select,
+form textarea {
+	font-family: Open Sans, sans-serif;
+	color: var(--onyx);
+}
+
+.btn {
+	background-color: var(--primary-color);
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 5px;
+	font-size: 1rem;
+	transition: all 0.3s ease;
+}
+.card {
+	background: #f3f3f3;
+	padding: 2.6rem;
+	border-radius: 0.5rem;
+}
+h1 {
+	font-size: 0.8em;
+	font-weight: 700;
+	margin: 0 0 0.8em 0;
+	text-align: right;
+	color: #000;
+	border-radius: 50px;
+}
+h1 strong {
+	background: #000;
+	padding: 0.4em 1.2em 0.4em 0.7em;
+	margin: 0 0 0 0.5em;
+	border-radius: 50px;
+	display: inline-block;
+	color: #fff;
+	position: relative;
+	z-index: 2;
+	font-style: italic;
+}
+h2 {
+	font-size: 1rem;
+	margin: 0 0 1.4em 0;
+}
+label {
+	font-size: 0.8rem;
+	margin: 0 0 1em 0;
+	display: inline-block;
+}
+.brand {
+	margin: 0 0 3rem 0;
+}
+input,
+textarea,
+input {
+	background: #fff;
+	border-radius: 0.5em;
+	padding: 0.8em;
+	border: none;
+	width: 100%;
+	color: #fff;
+	border: 1px solid rgb(215, 215, 215);
+}
+.field {
+	margin: 0 0 1.2rem 0;
+}
