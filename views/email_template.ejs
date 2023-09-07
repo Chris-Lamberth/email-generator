@@ -64,17 +64,13 @@
 
 							<a href="<%= headerLinks.appointment %>" style="background-color: <%= colors.primary %>; font-size: 14px; line-height: 18px; font-family: Helvetica, sans-serif; color: #ffffff; font-weight: bold; text-decoration: none; padding-top: 12px; padding-bottom: 12px; padding-left: 20px; padding-right: 20px; display: inline-block;">Book Appointment</a><br><br><br>
 
-							<!-- BRAKEmax -->
-							<img src="images/coupon_53.jpg" width="500" height="258" alt="Coupon" border="0" /><br><br>
-							<img src="images/coupon_55.jpg" width="500" height="258" alt="Coupon" border="0" /><br><br>
-							<img src="images/coupon_22.jpg" width="500" height="258" alt="Coupon" border="0" /><br><br>
-							<img src="images/coupon_7.jpg" width="500" height="258" alt="Coupon" border="0" /><br><br>
-							<img src="images/coupon_6.jpg" width="500" height="258" alt="Coupon" border="0" /><br><br>
-							<img src="images/coupon_31.jpg" width="500" height="258" alt="Coupon" border="0" /><br><br>
-							<img src="images/coupon_4.jpg" width="500" height="258" alt="Coupon" border="0" /><br><br>
+							<!-- coupons -->
+							<% coupons.forEach(couponPath=> { %>
+								<img src="<%= couponPath %>" alt="Coupon" border="0" /><br><br>
+								<% }); %>
 
 
-							<a href="<%= headerLinks.appointment %>" style="background-color: <%= colors.primary %>; font-size: 14px; line-height: 18px; font-family: Helvetica, sans-serif; color: #ffffff; font-weight: bold; text-decoration: none; padding-top: 12px; padding-bottom: 12px; padding-left: 20px; padding-right: 20px; display: inline-block;">Book Appointment</a>
+									<a href="<%= headerLinks.appointment %>" style="background-color: <%= colors.primary %>; font-size: 14px; line-height: 18px; font-family: Helvetica, sans-serif; color: #ffffff; font-weight: bold; text-decoration: none; padding-top: 12px; padding-bottom: 12px; padding-left: 20px; padding-right: 20px; display: inline-block;">Book Appointment</a>
 
 						</td>
 						<td width="40" style="background-color: #ffffff;"></td>

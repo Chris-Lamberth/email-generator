@@ -33,10 +33,10 @@
 
 					<div class="field">
 						<div class="group">
-							<label for="tireHeaderImage">Header Image</label>
+							<label for="serviceHeaderImage">Header Image</label>
 							<p>.jpg only</p>
 						</div>
-						<input type="file" id="tireHeaderImage" name="tireHeaderImage" accept=".jpg">
+						<input type="file" id="serviceHeaderImage" name="serviceHeaderImage" accept=".jpg">
 					</div>
 				</div>
 				<div class="group">
@@ -74,22 +74,14 @@
 					</div>
 
 					<div class="coupons">
-						<% serviceBrands.forEach(brand=> { %>
+						<% serviceBrands.concat(tireBrands).forEach(brand=> { %>
 							<div class="field">
-								<label for="<%= brand %>">
+								<label for="<%= brand %>Coupons">
 									<%= brand %>:
 								</label>
-								<input type="text" id="<%= brand %>" name="<%= brand %>" accept=".jpg">
+								<input type="text" id="<%= brand %>Coupons" name="<%= brand %>Coupons">
 							</div>
 							<% }); %>
-								<% tireBrands.forEach(brand=> { %>
-									<div class="field">
-										<label for="<%= brand %>">
-											<%= brand %>:
-										</label>
-										<input type="text" id="<%= brand %>" name="<%= brand %>" accept=".jpg">
-									</div>
-									<% }); %>
 					</div>
 				</div>
 				<button class="btn" type="submit">Generate Emails</button>
