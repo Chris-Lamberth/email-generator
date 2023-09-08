@@ -10,7 +10,7 @@
 			"headerLinks": {
 				"services": "https://brakemax.com/auto-services/",
 				"deals": "https://brakemax.com/discounts/",
-				"appointment": "https://brakemax.com/contact-us/appointments/"
+				"book appointment": "https://brakemax.com/contact-us/appointments/"
 			},
 			"footerLinks": {
 				"services": {
@@ -43,7 +43,7 @@
 			"headerLinks": {
 				"services": "https://www.mydriversedge.com/services/",
 				"deals": "https://www.mydriversedge.com/coupons/",
-				"appointment": "https://www.mydriversedge.com/contact-us/appointments/"
+				"book appointment": "https://www.mydriversedge.com/contact-us/appointments/"
 			},
 			"footerLinks": {
 				"services": {
@@ -63,6 +63,48 @@
 					"Schedule an Appointment": "https://www.mydriversedge.com/contact-us/appointments/"
 				}
 			}
+		},
+		"familyauto": {
+			"name": "Family Auto",
+			"logoURL": "images/logo_familyauto.jpg",
+			"colors": {
+				"primary": "#0a284a"
+			},
+			"headerLinks": {
+				"services": "https://familyautoservice.com/services/",
+				"deals": "https://familyautoservice.com/offers/",
+				"book appointment": "https://familyautoservice.com/contact-us/"
+			},
+			"footerLinks": {
+				"resources": {
+					"Locations": "https://familyautoservice.com/locations/",
+					"Offers": "https://familyautoservice.com/offers/",
+					"Services": "https://familyautoservice.com/services/",
+					"Contact Us": "https://familyautoservice.com/services/"
+				}
+			}
+		},
+		"gaynors": {
+			"name": "Gaynor's Automotive",
+			"logoURL": "images/logo_gaynors.jpg",
+			"notification": "<b style='font-size:12px;'>We've added Saturday hours!</b> *At select locations",
+			"colors": {
+				"primary": "#c3002e"
+			},
+			"headerLinks": {
+				"services": "https://gaynors.com/services/",
+				"deals": "https://gaynors.com/coupons/",
+				"book appointment": "https://gaynors.com/appointments/"
+			},
+			"footerLinks": {
+				"resources": {
+					"Coupons": "https://gaynors.com/coupons/",
+					"Request a Quote": "https://gaynors.com/contact-us/request-a-quote/",
+					"Appointments": "https://gaynors.com/contact-us/",
+					"About Us": "https://gaynors.com/about/",
+					"Contact Us": "https://gaynors.com/contact-us/"
+				}
+			}
 		}
 	},
 	"tire": {
@@ -76,7 +118,7 @@
 			"headerLinks": {
 				"services": "https://www.mydriversedge.com/services/",
 				"deals": "https://www.mydriversedge.com/coupons/",
-				"appointment": "https://www.mydriversedge.com/contact-us/appointments/"
+				"book appointment": "https://www.mydriversedge.com/contact-us/appointments/"
 			},
 			"footerLinks": {
 				"services": {

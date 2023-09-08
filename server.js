@@ -6,6 +6,7 @@ const fs = require('fs');
 const path = require('path');
 const os = require('os');
 const archiver = require('archiver'); 
+const sharp = require('sharp');
 
 const app = express();
 const port = 3000;
@@ -23,6 +24,18 @@ function getBrandObjectNameFromName(jsonData, brandName) {
         }
     }
     return null;
+}
+
+function getAltTextFromFileName(fileName) {
+    return fileName.replace(/^\d+_/, '').replace(/\.jpg$/, '').replace(/_/g, ' ').trim();
+}
+
+async function getImageDimensions(filePath) {
+    const metadata = await sharp(filePath).metadata();
+    return {
+        width: Math.round(metadata.width / 2),
+        height: Math.round(metadata.height / 2)
+    };
 }
 
 app.set('view engine', 'ejs');
@@ -50,10 +63,10 @@ const fileFilter = (req, file, cb) => {
 const upload = multer({ storage: storage, fileFilter: fileFilter });
 
 app.get('/', (req, res) => {
-	const jsonData = JSON.parse(fs.readFileSync('data.json', 'utf8'));
-	const serviceBrands = Object.values(jsonData.service).map(brand => brand.name);
-	const tireBrands = Object.values(jsonData.tire).map(brand => brand.name);
-	res.render('form_page', { serviceBrands, tireBrands });
+    const jsonData = JSON.parse(fs.readFileSync('data.json', 'utf8'));
+    const serviceBrands = Object.values(jsonData.service).map(brand => brand.name);
+    const tireBrands = Object.values(jsonData.tire).map(brand => brand.name);
+    res.render('form_page', { serviceBrands, tireBrands });
 });
 
 app.post('/generate-emails', upload.fields([{ name: 'serviceHeaderImage', maxCount: 1 }, { name: 'tireHeaderImage', maxCount: 1 }, { name: 'directory', maxCount: 100 }]), async (req, res) => {
@@ -82,11 +95,17 @@ app.post('/generate-emails', upload.fields([{ name: 'serviceHeaderImage', maxCou
             const couponNumbers = req.body[`${brand.name}Coupons`].split(',').map(num => num.trim());
             const couponFiles = req.files['directory'].filter(file => couponNumbers.includes(file.originalname.split('_')[0]));
             
+            const couponDimensions = {};
             for (let file of couponFiles) {
                 await fs.promises.copyFile(file.path, path.join(imagePath, file.originalname));
+                couponDimensions[file.originalname] = await getImageDimensions(path.join(imagePath, file.originalname));
             }
 
-            const couponPaths = couponFiles.map(file => path.join('images', file.originalname));
+            const couponPaths = couponFiles.map(file => ({
+                path: path.join('images', file.originalname),
+                dimensions: couponDimensions[file.originalname],
+                alt: getAltTextFromFileName(file.originalname)
+            }));
 
             const emailContent = await ejs.renderFile('./views/email_template.ejs', {
                 title: replacePlaceholders(req.body[`${category}Title`], brandData.name),
@@ -97,6 +116,7 @@ app.post('/generate-emails', upload.fields([{ name: 'serviceHeaderImage', maxCou
                 headerLinks: brandData.headerLinks,
                 footerLinks: brandData.footerLinks,
                 phone: brandData.phone,
+					 notification: brandData.notification,
                 name: brandData.name,
                 coupons: couponPaths
             });

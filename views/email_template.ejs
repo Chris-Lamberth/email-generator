@@ -26,6 +26,7 @@
 			</td>
 			<td width="40"></td>
 		</tr>
+
 		<tr width="580" height="20" style="background-color: #ffffff;">
 			<td></td>
 			<td></td>
@@ -65,9 +66,9 @@
 							<a href="<%= headerLinks.appointment %>" style="background-color: <%= colors.primary %>; font-size: 14px; line-height: 18px; font-family: Helvetica, sans-serif; color: #ffffff; font-weight: bold; text-decoration: none; padding-top: 12px; padding-bottom: 12px; padding-left: 20px; padding-right: 20px; display: inline-block;">Book Appointment</a><br><br><br>
 
 							<!-- coupons -->
-							<% coupons.forEach(couponPath=> { %>
-								<img src="<%= couponPath %>" alt="Coupon" border="0" /><br><br>
-								<% }); %>
+							<% for(let coupon of coupons) { %>
+								<img src="<%= coupon.path %>" alt="<%= coupon.alt %>" width="<%= coupon.dimensions.width %>" height="<%= coupon.dimensions.height %>"><br><br>
+								<% } %>
 
 
 									<a href="<%= headerLinks.appointment %>" style="background-color: <%= colors.primary %>; font-size: 14px; line-height: 18px; font-family: Helvetica, sans-serif; color: #ffffff; font-weight: bold; text-decoration: none; padding-top: 12px; padding-bottom: 12px; padding-left: 20px; padding-right: 20px; display: inline-block;">Book Appointment</a>
