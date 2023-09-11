@@ -21,7 +21,7 @@
 				<font style="font-size: 14px; line-height: 14px; font-family: Helvetica, sans-serif; color:<%= colors.primary %>;">
 					<a href="<%= headerLinks.services %>" style="color:gray; text-decoration:none;">Services</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 					<a href="<%= headerLinks.deals %>" style="color:gray; text-decoration:none;">Deals</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-					<a href="<%= headerLinks.appointment %>" style="color:gray; text-decoration:none;">Book Appointment</a>
+					<a href="<%= headerLinks['book appointment'] %>" style="color:gray; text-decoration:none;">Book Appointment</a>
 				</font>
 			</td>
 			<td width="40"></td>
@@ -34,127 +34,154 @@
 			<td></td>
 		</tr>
 	</table>
-	<table width="580" height="5" cellpadding="0" cellspacing="0" border="0" align="center" bgcolor="<%= colors.primary %>">
-		<tr width="580">
-			<td></td>
-		</tr>
-	</table>
-	<table width="580" cellpadding="0" cellspacing="0" border="0" align="center">
 
-		<tr width="580" height="235">
-			<td><img src="<%= headerImage %>" width="580" height="235" alt="" border="0" /></td>
-		</tr>
+	<% if (notification) { %>
+		<table width="580" height="20" cellpadding="0" cellspacing="0" border="0" align="center" bgcolor="#c3002e">
+			<tr width="580" height="20px" bgcolor="<%= colors.primary %>" style="text-align:center">
+				<td>
+					<font style="font-size: 10px; line-height: 12px; font-family: Helvetica, sans-serif; color: #ffffff;">
+						<%-notification %>
+					</font>
+				</td>
+			</tr>
+		</table>
+		<% } else { %>
+			<table width="580" height="5" cellpadding="0" cellspacing="0" border="0" align="center" bgcolor="<%= colors.primary %>">
+				<tr width="580">
+					<td></td>
+				</tr>
+			</table>
+			<% } %>
+				<table width="580" cellpadding="0" cellspacing="0" border="0" align="center">
 
-		<tr width="580" height="40" style="background-color: #ffffff;">
-			<td width="580" height="40" style="background-color: #ffffff;"></td>
-		</tr>
-		<tr width="580" style="background-color: #ffffff;">
-			<td width="580">
-				<table width="580" cellpadding="0" cellspacing="0" border="0">
+					<tr width="580" height="235">
+						<td><img src="<%= headerImage %>" width="580" height="235" alt="" border="0" /></td>
+					</tr>
+
+					<tr width="580" height="40" style="background-color: #ffffff;">
+						<td width="580" height="40" style="background-color: #ffffff;"></td>
+					</tr>
 					<tr width="580" style="background-color: #ffffff;">
-						<td width="40" style="background-color: #ffffff;"></td>
-						<td width="500" style="background-color: #ffffff;">
-							<!-- BRAKEmax -->
-							<font style="font-size: 18px; line-height: 20px; font-family: Helvetica, sans-serif; font-weight: bold; color: <%= colors.primary %>;">
-								<%= title %>
-							</font><br><br>
+						<td width="580">
+							<table width="580" cellpadding="0" cellspacing="0" border="0">
+								<tr width="580" style="background-color: #ffffff;">
+									<td width="40" style="background-color: #ffffff;"></td>
+									<td width="500" style="background-color: #ffffff;">
+										<!-- BRAKEmax -->
+										<font style="font-size: 18px; line-height: 20px; font-family: Helvetica, sans-serif; font-weight: bold; color: <%= colors.primary %>;">
+											<%= title %>
+										</font><br><br>
 
-							<font style="font-size: 14px; line-height: 18px; font-family: Helvetica, sans-serif;">
-								<%= bodyCopy %>
-							</font><br><br>
+										<font style="font-size: 14px; line-height: 18px; font-family: Helvetica, sans-serif;">
+											<%= bodyCopy %>
+										</font><br><br>
 
-							<a href="<%= headerLinks.appointment %>" style="background-color: <%= colors.primary %>; font-size: 14px; line-height: 18px; font-family: Helvetica, sans-serif; color: #ffffff; font-weight: bold; text-decoration: none; padding-top: 12px; padding-bottom: 12px; padding-left: 20px; padding-right: 20px; display: inline-block;">Book Appointment</a><br><br><br>
+										<a href="<%= headerLinks['book appointment'] %>" style="background-color: <%= colors.primary %>; font-size: 14px; line-height: 18px; font-family: Helvetica, sans-serif; color: #ffffff; font-weight: bold; text-decoration: none; padding-top: 12px; padding-bottom: 12px; padding-left: 20px; padding-right: 20px; display: inline-block;">Book Appointment</a><br><br><br>
 
-							<!-- coupons -->
-							<% for(let coupon of coupons) { %>
-								<img src="<%= coupon.path %>" alt="<%= coupon.alt %>" width="<%= coupon.dimensions.width %>" height="<%= coupon.dimensions.height %>"><br><br>
-								<% } %>
+										<!-- coupons -->
+										<% for(let coupon of coupons) { %>
+											<img src="<%= coupon.path %>" alt="<%= coupon.alt %>" width="<%= coupon.dimensions.width %>" height="<%= coupon.dimensions.height %>"><br><br>
+											<% } %>
 
 
-									<a href="<%= headerLinks.appointment %>" style="background-color: <%= colors.primary %>; font-size: 14px; line-height: 18px; font-family: Helvetica, sans-serif; color: #ffffff; font-weight: bold; text-decoration: none; padding-top: 12px; padding-bottom: 12px; padding-left: 20px; padding-right: 20px; display: inline-block;">Book Appointment</a>
+												<a href="<%= headerLinks['book appointment'] %>" style="background-color: <%= colors.primary %>; font-size: 14px; line-height: 18px; font-family: Helvetica, sans-serif; color: #ffffff; font-weight: bold; text-decoration: none; padding-top: 12px; padding-bottom: 12px; padding-left: 20px; padding-right: 20px; display: inline-block;">Book Appointment</a>
+
+									</td>
+									<td width="40" style="background-color: #ffffff;"></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr width="580" height="40" style="background-color: #ffffff;">
+						<td width="580" height="40" style="background-color: #ffffff;"></td>
+					</tr>
+					<tr>
+						<td>
+							<table width="580" height="5" cellpadding="0" cellspacing="0" border="0" align="center" bgcolor="<%= colors.primary %>">
+								<tr width="580">
+									<td></td>
+								</tr>
+							</table>
 
 						</td>
-						<td width="40" style="background-color: #ffffff;"></td>
 					</tr>
-				</table>
-			</td>
-		</tr>
-		<tr width="580" height="40" style="background-color: #ffffff;">
-			<td width="580" height="40" style="background-color: #ffffff;"></td>
-		</tr>
-		<tr>
-			<td>
-				<table width="580" height="5" cellpadding="0" cellspacing="0" border="0" align="center" bgcolor="<%= colors.primary %>">
-					<tr width="580">
-						<td></td>
+					<tr width="580" height="40" style="background-color: #ebebeb;">
+						<td width="580" height="40" style="background-color: #ebebeb;"></td>
 					</tr>
-				</table>
-
-			</td>
-		</tr>
-		<tr width="580" height="40" style="background-color: #ebebeb;">
-			<td width="580" height="40" style="background-color: #ebebeb;"></td>
-		</tr>
-		<tr width="580" style="background-color: #ebebeb;">
-			<td>
-				<table width="580" cellpadding="0" cellspacing="0" border="0">
 					<tr width="580" style="background-color: #ebebeb;">
-						<td width="40" style="background-color: #ebebeb;" valign="top"></td>
+						<td>
+							<table width="580" cellpadding="0" cellspacing="0" border="0">
+								<tr width="580" style="background-color: #ebebeb;">
+									<td width="40" style="background-color: #ebebeb;" valign="top"></td>
 
-						<% for (let section in footerLinks) { %>
-							<td width="166" style="background-color: #ebebeb;" valign="top">
-								<font style="font-size: 12px; line-height: 16px; font-family: Helvetica, sans-serif;">
-									<font style="font-weight: bold;">
-										<%= section.toUpperCase() %>
-									</font><br><br>
+									<% for (let i=0; i < 3; i++) { %>
+										<td width="166" style="background-color: #ebebeb;" valign="top">
+											<font style="font-size: 12px; line-height: 16px; font-family: Helvetica, sans-serif;">
+												<% let section=(footerLinks[i] && footerLinks[i].section) || "" ; %>
+													<% let links=(footerLinks[i] && footerLinks[i].links) || {}; %>
 
-									<% for (let linkName in footerLinks[section]) { %>
-										<a href="<%= footerLinks[section][linkName] %>" style="color: #000000; text-decoration: none;">
-											<%= linkName %>
-										</a><br>
+														<font style="font-weight: bold;">
+															<%= section.toUpperCase() %>
+														</font><br><br>
+
+														<% for (let linkName in links) { %>
+															<a href="<%= links[linkName] %>" style="color: #000000; text-decoration: none;">
+																<%= linkName %>
+															</a><br>
+															<% } %>
+
+																<% if (section.toLowerCase()==="contact us" && phone) { %>
+																	<br>Call Us <%= phone %>
+																		<% } %>
+											</font>
+										</td>
 										<% } %>
 
-											<% if (section.toLowerCase()==="contact us" && phone) { %>
-												<br>Call Us <%= phone %>
-													<% } %>
-								</font>
-							</td>
-							<% } %>
 
-								<td width="42" style="background-color: #ebebeb;" valign="top"></td>
-					</tr>
-				</table>
 
-			</td>
-		</tr>
-		<tr width="580" height="40" style="background-color: #ebebeb;">
-			<td width="580" height="40" style="background-color: #ebebeb;"></td>
-		</tr>
-		<tr width="580" height="20">
-			<td width="580" height="20"></td>
-		</tr>
-		<tr width="580">
-			<td>
-				<table width="580" cellpadding="0" cellspacing="0" border="0">
-					<tr width="580">
-						<td width="40"></td>
-						<td width="500" align="center">
-							<font style="font-size: 10px; line-height: 16px; font-family: Helvetica, sans-serif; text-align: center; color:#696969;">
-								<%= name %>. All Rights Reserved<br>
-									3945 E. Fort Lowell Road Ste 211 Tucson, AZ 85712<br>
-									<unsubscribe style="color:#696969;">Unsubscribe</unsubscribe>
-							</font><br><br>
+											<td width="42" style="background-color: #ebebeb;" valign="top"></td>
+								</tr>
+							</table>
+							<% if (footerGraphic) { %>
+								<table width="580" cellpadding="0" cellspacing="0" border="0">
+									<tr width="580" style="background-color: #ebebeb;">
+										<td width="580" style="background-color: #ebebeb; text-align:center;" valign="top">
+											<img src="<%= footerGraphic %>" width="300px" height="107" alt="Logo">
+										</td>
+									</tr>
+								</table>
+								<% } %>
+
 						</td>
-						<td width="40"></td>
 					</tr>
-				</table>
-			</td>
-		</tr>
-		<tr width="580" height="40">
-			<td width="580" height="40"></td>
-		</tr>
+					<tr width="580" height="40" style="background-color: #ebebeb;">
+						<td width="580" height="40" style="background-color: #ebebeb;"></td>
+					</tr>
+					<tr width="580" height="20">
+						<td width="580" height="20"></td>
+					</tr>
+					<tr width="580">
+						<td>
+							<table width="580" cellpadding="0" cellspacing="0" border="0">
+								<tr width="580">
+									<td width="40"></td>
+									<td width="500" align="center">
+										<font style="font-size: 10px; line-height: 16px; font-family: Helvetica, sans-serif; text-align: center; color:#696969;">
+											<%= name %>. All Rights Reserved<br>
+												3945 E. Fort Lowell Road Ste 211 Tucson, AZ 85712<br>
+												<unsubscribe style="color:#696969;">Unsubscribe</unsubscribe>
+										</font><br><br>
+									</td>
+									<td width="40"></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr width="580" height="40">
+						<td width="580" height="40"></td>
+					</tr>
 
-	</table>
+				</table>
 </body>
 
 </html>

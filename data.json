@@ -1,143 +1,381 @@
 {
 	"service": {
-		"brakemax": {
-			"name": "BRAKEmax",
-			"logoURL": "images/logo_brakemax.jpg",
-			"phone": "(888) 334-7449",
-			"colors": {
-				"primary": "#375ea8"
+	  "brakemax": {
+		 "name": "BRAKEmax",
+		 "logoURL": "images/logo_brakemax.jpg",
+		 "phone": "(888) 334-7449",
+		 "colors": {
+			"primary": "#375ea8"
+		 },
+		 "headerLinks": {
+			"services": "https://brakemax.com/auto-services/",
+			"deals": "https://brakemax.com/discounts/",
+			"book appointment": "https://brakemax.com/contact-us/appointments/"
+		 },
+		 "footerLinks": [
+			{
+			  "section": "services",
+			  "links": {
+				 "Tires": "https://brakemax.com/auto-services/tires/",
+				 "Oil Changes": "https://brakemax.com/auto-services/oil-change/",
+				 "Engine Services": "https://brakemax.com/auto-services/engine/",
+				 "Air Conditioning Services": "https://brakemax.com/auto-services/ac-repair/",
+				 "Preventative Services": "https://brakemax.com/auto-services/maintenance/",
+				 "Other Services": "https://brakemax.com/auto-services/other/"
+			  }
 			},
-			"headerLinks": {
-				"services": "https://brakemax.com/auto-services/",
-				"deals": "https://brakemax.com/discounts/",
-				"book appointment": "https://brakemax.com/contact-us/appointments/"
+			{
+			  "section": "resources",
+			  "links": {
+				 "Coupons": "https://brakemax.com/discounts/",
+				 "Concierge Service": "https://brakemax.com/concierge-service/",
+				 "Reading Your Tires": "https://brakemax.com/resources/reading-tires/",
+				 "Blog": "https://brakemax.com/blog/"
+			  }
 			},
-			"footerLinks": {
-				"services": {
-					"Tires": "https://brakemax.com/auto-services/tires/",
-					"Oil Changes": "https://brakemax.com/auto-services/oil-change/",
-					"Engine Services": "https://brakemax.com/auto-services/engine/",
-					"Air Conditioning Services": "https://brakemax.com/auto-services/ac-repair/",
-					"Preventative Services": "https://brakemax.com/auto-services/maintenance/",
-					"Other Services": "https://brakemax.com/auto-services/other/"
-				},
-				"resources": {
-					"Coupons": "https://brakemax.com/discounts/",
-					"Concierge Service": "https://brakemax.com/concierge-service/",
-					"Reading Your Tires": "https://brakemax.com/resources/reading-tires/",
-					"Blog": "https://brakemax.com/blog/"
-				},
-				"contact us":{
-					"Request a Quote": "https://brakemax.com/contact-us/appointments/",
-					"Schedule an Appointment": "https://brakemax.com/contact-us/appointments/"
-				}
+			{
+			  "section": "contact us",
+			  "links": {
+				 "Request a Quote": "https://brakemax.com/contact-us/appointments/",
+				 "Schedule an Appointment": "https://brakemax.com/contact-us/appointments/"
+			  }
 			}
-		},
-		"driversedge": {
-			"name": "Driver's Edge",
-			"logoURL": "images/logo_driversedge.jpg",
-			"phone": "(844) 564-8111",
-			"colors": {
-				"primary": "#d6392d"
+		 ]
+	  },
+	  "driversedge": {
+		 "name": "Driver's Edge",
+		 "logoURL": "images/logo_driversedge.jpg",
+		 "phone": "(844) 564-8111",
+		 "colors": {
+			"primary": "#d6392d"
+		 },
+		 "headerLinks": {
+			"services": "https://www.mydriversedge.com/services/",
+			"deals": "https://www.mydriversedge.com/coupons/",
+			"book appointment": "https://www.mydriversedge.com/contact-us/appointments/"
+		 },
+		 "footerLinks": [
+			{
+			  "section": "services",
+			  "links": {
+				 "Oil Change": "https://www.mydriversedge.com/services/oil-change/",
+				 "A/C Service & Repair": "https://www.mydriversedge.com/services/air-conditioning/",
+				 "Brake Repair": "https://www.mydriversedge.com/services/brake-repair/",
+				 "Preventative Maintenance": "https://www.mydriversedge.com/services/preventative-maintenance/",
+				 "Tire Services": "https://www.mydriversedge.com/services/tire-rotation-balance/"
+			  }
 			},
-			"headerLinks": {
-				"services": "https://www.mydriversedge.com/services/",
-				"deals": "https://www.mydriversedge.com/coupons/",
-				"book appointment": "https://www.mydriversedge.com/contact-us/appointments/"
+			{
+			  "section": "resources",
+			  "links": {
+				 "Coupons": "https://www.mydriversedge.com/coupons/",
+				 "Our Automotive Blog": "https://www.mydriversedge.com/blog/",
+				 "State Vehicle Inspections": "https://www.mydriversedge.com/services/texas-state-inspections/"
+			  }
 			},
-			"footerLinks": {
-				"services": {
-					"Oil Change": "https://www.mydriversedge.com/services/oil-change/",
-					"A/C Service & Repair": "https://www.mydriversedge.com/services/air-conditioning/",
-					"Brake Repair": "https://www.mydriversedge.com/services/brake-repair/",
-					"Preventative Maintenance": "https://www.mydriversedge.com/services/preventative-maintenance/",
-					"Tire Services": "https://www.mydriversedge.com/services/tire-rotation-balance/"
-				},
-				"resources": {
-					"Coupons": "https://www.mydriversedge.com/coupons/",
-					"Our Automotive Blog": "https://www.mydriversedge.com/blog/",
-					"State Vehicle Inspections": "https://www.mydriversedge.com/services/texas-state-inspections/"
-				},
-				"contact us":{
-					"Concierge Service": "https://www.mydriversedge.com/concierge-service/",
-					"Schedule an Appointment": "https://www.mydriversedge.com/contact-us/appointments/"
-				}
+			{
+			  "section": "contact us",
+			  "links": {
+				 "Concierge Service": "https://www.mydriversedge.com/concierge-service/",
+				 "Schedule an Appointment": "https://www.mydriversedge.com/contact-us/appointments/"
+			  }
 			}
-		},
-		"familyauto": {
-			"name": "Family Auto",
-			"logoURL": "images/logo_familyauto.jpg",
-			"colors": {
-				"primary": "#0a284a"
-			},
-			"headerLinks": {
-				"services": "https://familyautoservice.com/services/",
-				"deals": "https://familyautoservice.com/offers/",
-				"book appointment": "https://familyautoservice.com/contact-us/"
-			},
-			"footerLinks": {
-				"resources": {
-					"Locations": "https://familyautoservice.com/locations/",
-					"Offers": "https://familyautoservice.com/offers/",
-					"Services": "https://familyautoservice.com/services/",
-					"Contact Us": "https://familyautoservice.com/services/"
-				}
+		 ]
+	  },
+	  "familyauto": {
+		 "name": "Family Auto",
+		 "logoURL": "images/logo_familyauto.jpg",
+		 "colors": {
+			"primary": "#0a284a"
+		 },
+		 "headerLinks": {
+			"services": "https://familyautoservice.com/services/",
+			"deals": "https://familyautoservice.com/offers/",
+			"book appointment": "https://familyautoservice.com/contact-us/"
+		 },
+		 "footerLinks": [
+			{
+			  "section": "resources",
+			  "links": {
+				 "Locations": "https://familyautoservice.com/locations/",
+				 "Offers": "https://familyautoservice.com/offers/",
+				 "Services": "https://familyautoservice.com/services/",
+				 "Contact Us": "https://familyautoservice.com/services/"
+			  }
 			}
-		},
-		"gaynors": {
-			"name": "Gaynor's Automotive",
-			"logoURL": "images/logo_gaynors.jpg",
-			"notification": "<b style='font-size:12px;'>We've added Saturday hours!</b> *At select locations",
-			"colors": {
-				"primary": "#c3002e"
+		 ]
+	  },
+	  "gaynors": {
+		 "name": "Gaynor's Automotive",
+		 "logoURL": "images/logo_gaynors.jpg",
+		 "notification": "<b style='font-size:12px;'>We've added Saturday hours!</b> *At select locations",
+		 "colors": {
+			"primary": "#c3002e"
+		 },
+		 "headerLinks": {
+			"services": "https://gaynors.com/services/",
+			"deals": "https://gaynors.com/coupons/",
+			"book appointment": "https://gaynors.com/appointments/"
+		 },
+		 "footerLinks": [
+			{
+			  "section": "resources",
+			  "links": {
+				 "Coupons": "https://gaynors.com/coupons/",
+				 "Request a Quote": "https://gaynors.com/contact-us/request-a-quote/",
+				 "Appointments": "https://gaynors.com/contact-us/"
+			  }
 			},
-			"headerLinks": {
-				"services": "https://gaynors.com/services/",
-				"deals": "https://gaynors.com/coupons/",
-				"book appointment": "https://gaynors.com/appointments/"
-			},
-			"footerLinks": {
-				"resources": {
-					"Coupons": "https://gaynors.com/coupons/",
-					"Request a Quote": "https://gaynors.com/contact-us/request-a-quote/",
-					"Appointments": "https://gaynors.com/contact-us/",
-					"About Us": "https://gaynors.com/about/",
-					"Contact Us": "https://gaynors.com/contact-us/"
-				}
+			{
+			  "section": "",
+			  "links": {
+				 "About Us": "https://gaynors.com/about/",
+				 "Contact Us": "https://gaynors.com/contact-us/"
+			  }
 			}
-		}
+		 ]
+	  },
+	  "gregs": {
+		 "name": "Greg's Japanese Auto",
+		 "logoURL": "images/logo_gregs.jpg",
+		 "notification": "<b style='font-size:12px;'>Now open Saturdays 8-5 pm!</b> *At select locations</font>",
+		 "colors": {
+			"primary": "#ed1b2d"
+		 },
+		 "headerLinks": {
+			"services": "https://www.gregs.com/services/",
+			"deals": "https://www.gregs.com/coupons/",
+			"book appointment": "https://www.gregs.com/schedule-appointment/"
+		 },
+		 "footerLinks": [
+			{
+			  "section": "resources",
+			  "links": {
+				 "Coupons": "https://www.gregs.com/coupons/",
+				 "Blog": "https://www.gregs.com/blog/"
+			  }
+			},
+			{
+			  "section": "",
+			  "links": {
+				 "About Us": "https://www.gregs.com/about/",
+				 "Contact Us": "https://www.gregs.com/contact-us/"
+			  }
+			}
+		 ]
+	  },
+	  "jeffs": {
+		 "name": "Jeff's Auto Repair",
+		 "logoURL": "images/logo_jeffs.jpg",
+		 "colors": {
+			"primary": "#e02026"
+		 },
+		 "headerLinks": {
+			"services": "https://jeffsauto.com/services/",
+			"deals": "https://jeffsauto.com/specials/",
+			"book appointment": "https://jeffsauto.com/#location-footer"
+		 },
+		 "footerLinks": [
+			{
+			  "section": "resources",
+			  "links": {
+				 "Coupons": "https://jeffsauto.com/specials/",
+				 "Blog": "https://jeffsauto.com/blog/"
+			  }
+			},
+			{
+			  "section": "",
+			  "links": {
+				 "About Us": "https://jeffsauto.com/about/",
+				 "Contact Us": "https://jeffsauto.com/about/#contact"
+			  }
+			}
+		 ]
+	  },
+	  "reliable": {
+		 "name": "Reliable Automotive",
+		 "logoURL": "images/logo_reliable.jpg",
+		 "colors": {
+			"primary": "#1c385b"
+		 },
+		 "headerLinks": {
+			"services": "https://reliable-auto.com/auto-repair/",
+			"deals": "https://reliable-auto.com/auto-repair-coupons/",
+			"book appointment": "https://reliable-auto.com/schedule-appointment"
+		 },
+		 "footerLinks": [
+			{
+			  "section": "resources",
+			  "links": {
+				 "Services": "https://reliable-auto.com/",
+				 "News": "https://reliable-auto.com/news/"
+			  }
+			},
+			{
+			  "section": "contact us",
+			  "links": {
+				 "Buda Auto Repair Shop": "https://reliable-auto.com/contact-buda/",
+				 "San Marcos Auto Repair Shop": "https://reliable-auto.com/contact-san-marcos/",
+				 "Kyle Auto Repair Shop": "https://reliable-auto.com/contact-kyle/",
+				 "Schedule a Visit": "https://reliable-auto.com/contact-kyle#appointments"
+			  }
+			}
+		 ]
+	  },
+	  "sunauto": {
+		 "name": "Sun Auto",
+		 "logoURL": "images/logo_sunauto.jpg",
+		 "colors": {
+			"primary": "#99000a"
+		 },
+		 "headerLinks": {
+			"services": "https://www.sunautoservice.com/complete-auto-repair-services/",
+			"deals": "https://www.sunautoservice.com/offers/",
+			"book appointment": "https://www.sunautoservice.com/appointments/"
+		 },
+		 "footerLinks": [
+			{
+			  "section": "resources",
+			  "links": {
+				 "Locations": "https://www.sunautoservice.com/find-a-location/",
+				 "Shop Talk": "https://www.sunautoservice.com/about-us/shop-talk/",
+				 "About Us": "https://www.sunautoservice.com/about-us/"
+			  }
+			},
+			{
+			  "section": "",
+			  "links": {
+				 "Financing Options": "https://www.sunautoservice.com/financing-options/",
+				 "Careers": "https://www.sunautoservice.com/careers/",
+				 "Fleet Services": "https://www.sunautoservice.com/fleet-services/"
+			  }
+			},
+			{
+			  "section": "",
+			  "links": {
+				 "Auto Diagrams": "https://www.sunautoservice.com/auto-diagrams/",
+				 "Community": "https://www.sunautoservice.com/community/"
+			  }
+			}
+		 ]
+	  },
+	  "sundevil": {
+		 "name": "Sun Devil",
+		 "logoURL": "images/logo_sundevil.jpg",
+		 "colors": {
+			"primary": "#99000a"
+		 },
+		 "headerLinks": {
+			"services": "https://www.sundevilauto.com/complete-auto-repair-services/",
+			"deals": "https://www.sundevilauto.com/offers/",
+			"book appointment": "https://www.sundevilauto.com/appointments/"
+		 },
+		 "footerLinks": [
+			{
+			  "section": "resources",
+			  "links": {
+				 "Locations": "https://www.sundevilauto.com/find-a-location/",
+				 "Appointments": "https://www.sundevilauto.com/appointments/",
+				 "Shop Talk": "https://www.sundevilauto.com/shoptalk/"
+			  }
+			},
+			{
+			  "section": "",
+			  "links": {
+				 "Services": "https://www.sundevilauto.com/complete-auto-repair-services/",
+				 "Financing Options": "https://www.sundevilauto.com/financing-options/",
+				 "Careers": "https://www.sundevilauto.com/careers/"
+			  }
+			},
+			{
+			  "section": "",
+			  "links": {
+				 "Fleet Services": "https://www.sundevilauto.com/fleet-services/",
+				 "Community": "https://www.sundevilauto.com/community/",
+				 "About Us": "https://www.sundevilauto.com/about-us/"
+			  }
+			}
+		 ],
+		 "footerGraphic": "images/ralogo.jpg"
+	  },
+	  "wilhelm": {
+		 "name": "Wilhelm Auto",
+		 "logoURL": "images/logo_wilhelm.jpg",
+		 "colors": {
+			"primary": "#db3f40"
+		 },
+		 "headerLinks": {
+			"services": "https://www.wilhelmautomotive.com/auto-services/",
+			"deals": "https://www.wilhelmautomotive.com/coupons/",
+			"book appointment": "https://www.wilhelmautomotive.com/contact-us/appointments/"
+		 },
+		 "footerLinks": [
+			{
+			  "section": "resources",
+			  "links": {
+				 "Shop Tire Brands": "https://www.wilhelmautomotive.com/tires/",
+				 "Tire Services": "https://www.wilhelmautomotive.com/auto-services/tire-repair/"
+			  }
+			},
+			{
+			  "section": "info center",
+			  "links": {
+				 "Employment": "https://www.wilhelmautomotive.com/employment/",
+				 "In the Press": "https://www.wilhelmautomotive.com/in-the-press/"
+			  }
+			},
+			{
+			  "section": "customer info",
+			  "links": {
+				 "Roadside Asistance": "https://www.wilhelmautomotive.com/roadside-assistance/",
+				 "Warranty Info": "https://www.wilhelmautomotive.com/warranty-information/",
+				 "Rewards": "https://www.wilhelmautomotive.com/rewards/"
+			  }
+			}
+		 ]
+	  }
 	},
 	"tire": {
-		"testTire": {
-			"name": "Test Tire",
-			"logoURL": "images/logo_driversedge.jpg",
-			"phone": "(844) 564-8111",
-			"colors": {
-				"primary": "#d6392d"
+	  "testTire": {
+		 "name": "Test Tire",
+		 "logoURL": "images/logo_driversedge.jpg",
+		 "phone": "(844) 564-8111",
+		 "colors": {
+			"primary": "#d6392d"
+		 },
+		 "headerLinks": {
+			"services": "https://www.mydriversedge.com/services/",
+			"deals": "https://www.mydriversedge.com/coupons/",
+			"book appointment": "https://www.mydriversedge.com/contact-us/appointments/"
+		 },
+		 "footerLinks": [
+			{
+			  "section": "services",
+			  "links": {
+				 "Oil Change": "https://www.mydriversedge.com/services/oil-change/",
+				 "A/C Service & Repair": "https://www.mydriversedge.com/services/air-conditioning/",
+				 "Brake Repair": "https://www.mydriversedge.com/services/brake-repair/",
+				 "Preventative Maintenance": "https://www.mydriversedge.com/services/preventative-maintenance/",
+				 "Tire Services": "https://www.mydriversedge.com/services/tire-rotation-balance/"
+			  }
 			},
-			"headerLinks": {
-				"services": "https://www.mydriversedge.com/services/",
-				"deals": "https://www.mydriversedge.com/coupons/",
-				"book appointment": "https://www.mydriversedge.com/contact-us/appointments/"
+			{
+			  "section": "resources",
+			  "links": {
+				 "Coupons": "https://www.mydriversedge.com/coupons/",
+				 "Our Automotive Blog": "https://www.mydriversedge.com/blog/",
+				 "State Vehicle Inspections": "https://www.mydriversedge.com/services/texas-state-inspections/"
+			  }
 			},
-			"footerLinks": {
-				"services": {
-					"Oil Change": "https://www.mydriversedge.com/services/oil-change/",
-					"A/C Service & Repair": "https://www.mydriversedge.com/services/air-conditioning/",
-					"Brake Repair": "https://www.mydriversedge.com/services/brake-repair/",
-					"Preventative Maintenance": "https://www.mydriversedge.com/services/preventative-maintenance/",
-					"Tire Services": "https://www.mydriversedge.com/services/tire-rotation-balance/"
-				},
-				"resources": {
-					"Coupons": "https://www.mydriversedge.com/coupons/",
-					"Our Automotive Blog": "https://www.mydriversedge.com/blog/",
-					"State Vehicle Inspections": "https://www.mydriversedge.com/services/texas-state-inspections/"
-				},
-				"contact us":{
-					"Concierge Service": "https://www.mydriversedge.com/concierge-service/",
-					"Schedule an Appointment": "https://www.mydriversedge.com/contact-us/appointments/"
-				}
+			{
+			  "section": "contact us",
+			  "links": {
+				 "Concierge Service": "https://www.mydriversedge.com/concierge-service/",
+				 "Schedule an Appointment": "https://www.mydriversedge.com/contact-us/appointments/"
+			  }
 			}
-		}
+		 ]
+	  }
 	}
-}
+ }
+ 
