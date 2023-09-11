@@ -124,7 +124,8 @@ app.post('/generate-emails', upload.fields([{ name: 'serviceHeaderImage', maxCou
                 name: brandData.name,
                 coupons: couponPaths,
                 notification: brandData.notification,
-                footerGraphic: brandData.footerGraphic
+                footerGraphic: brandData.footerGraphic,
+					 disclaimer: brandData.disclaimer
             });
 
             await fs.writeFile(path.join(tmpDir, 'index.html'), emailContent);
