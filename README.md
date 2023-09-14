@@ -1,6 +1,6 @@
 # email-generator
 
- 1. Install node.js if you don't already have it. https://nodejs.dev/en/download/*
+ 1. Install node.js if you don't already have it. https://nodejs.dev/en/download/
  2. Download the project from the repo
  3. Use your CLI (Terminal, Warp, VS Code Terminal, ect) and navigate into the project's folder.  
  `cd path/to/project/email-generator`
