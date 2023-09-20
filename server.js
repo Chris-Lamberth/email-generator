@@ -26,10 +26,6 @@ async function getBrandObjectNameFromName(jsonData, brandName) {
     return null;
 }
 
-function getAltTextFromFileName(fileName) {
-    return fileName.replace(/^\d+_/, '').replace(/\.jpg$/, '').replace(/_/g, ' ').trim();
-}
-
 async function getImageDimensions(filePath) {
     const metadata = await sharp(filePath).metadata();
     return {
