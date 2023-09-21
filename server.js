@@ -41,11 +41,12 @@ app.use(express.json());
 app.use(express.static('public'));
 
 const storage = multer.diskStorage({
-    destination: os.tmpdir(),
-    filename: (req, file, cb) => {
-        const brandName = file.fieldname.split('Coupons')[0];
-        cb(null, `${brandName}-${file.fieldname}-${Date.now()}${path.extname(file.originalname)}`);
-    }
+	destination: os.tmpdir(),
+	filename: (req, file, cb) => {
+		 const brandName = file.fieldname.split('Coupons')[0];
+		 const timeStamp = new Date().toISOString().replace(/[:.-]/g, '');
+		 cb(null, `${brandName}-${file.fieldname}-${file.originalname}-${timeStamp}${path.extname(file.originalname)}`);
+	}
 });
 
 const upload = multer({ 
@@ -93,10 +94,19 @@ app.post('/generate-emails', upload.fields([{ name: 'serviceHeaderImage', maxCou
             }
 
             const couponNumbers = req.body[`${brand.name}Coupons`].split(',').map(num => num.trim());
-            const couponFiles = couponNumbers.map(num => {
-                return req.files['directory'].find(file => file.originalname.startsWith(num + '_'));
-            });
-
+				const couponFiles = couponNumbers.map(num => {
+					const pattern = new RegExp(`^${num}_[a-zA-Z0-9]+`);
+					const matches = req.files['directory'].filter(file => pattern.test(file.originalname));
+					
+					if (matches.length > 1) {
+						  console.warn(`Multiple matches for coupon number ${num}: ${matches.map(m => m.originalname).join(', ')}`);
+					} else if (matches.length === 0) {
+						  console.warn(`No match found for coupon number ${num}`);
+					}
+				 
+					return matches[0]; // returns the first match or undefined if no match
+			  });
+			  
             const couponDimensions = {};
             for (let file of couponFiles) {
                 await fs.copyFile(file.path, path.join(imagePath, file.originalname));
