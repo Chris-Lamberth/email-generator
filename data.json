@@ -333,6 +333,28 @@
 					}
 				}
 			]
+		},
+		"caliber": {
+			"name": "Caliber Auto Care",
+			"logoURL": "images/logo_caliber.jpg",
+			"colors": {
+				"primary": "#d26f38"
+			},
+			"headerLinks": {
+				"services": "https://caliberautocare.com/",
+				"deals": "https://caliberautocare.com/promotion/",
+				"book appointment": "https://caliberautocare.com/request-an-appointment/"
+			},
+			"footerLinks": [
+				{
+					"section": "resources",
+					"links": {
+						"Shop Tires": "https://caliberautocare.com/tires/",
+						"Auto Repair": "https://caliberautocare.com/auto-repair/",
+						"Oil Change": "https://caliberautocare.com/oil-change/"
+					}
+				}
+			]
 		}
 	},
 	"tire": {
@@ -744,6 +766,34 @@
 					"section": " ",
 					"links": {
 						"About Us": "https://www.tohaastire.com/About"
+					}
+				}
+			]
+		},
+		"boyds": {
+			"name": "Boyd's Tire & Service",
+			"logoURL": "images/logo_boyds.jpg",
+			"colors": {
+				"primary": "#003557"
+			},
+			"headerLinks": {
+				"services": "https://www.boydstire.com/automotive-Services",
+				"deals": "https://www.boydstire.com/coupons",
+				"book appointment": "https://www.boydstire.com/automotive-services/schedule-a-repair"
+			},
+			"footerLinks": [
+				{
+					"section": "resources",
+					"links": {
+						"Services": "https://www.boydstire.com/automotive-Services",
+						"Tires": "https://www.boydstire.com/tires",
+						"Wheels": "https://www.boydstire.com/wheels"
+					}
+				},
+				{
+					"section": " ",
+					"links": {
+						"Locations": "https://www.boydstire.com/Find-Us"
 					}
 				}
 			]
